@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import FactCard from "./FactCard";
+
 export default function Facts() {
   const [src, setSrc] = useState("");
   async function getFact() {
@@ -7,7 +9,7 @@ export default function Facts() {
     setSrc(response.data.all);
   }
   useEffect(() => {
-    getFact;
+    getFact();
   }, []);
   return (
     <div>
