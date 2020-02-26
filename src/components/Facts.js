@@ -7,7 +7,7 @@ export default function Facts() {
   async function getFact() {
     const response = await axios.get("https://cat-fact.herokuapp.com/facts");
 
-    setSrc(response.data.text);
+    setSrc(response.data.all[0].text);
   }
 
   useEffect(() => {
